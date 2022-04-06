@@ -1,0 +1,47 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+.eslintcache
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+test-results/
+playwright-report/
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+/public/service-worker.js
+/public/workbox-*.js
+/public/sw.js
+
+# misc
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# vercel
+.vercel
+
+# File I use to make little test and convert data programatically
+helper.js
+helper.mjs
+pages/helper.page.js
+pages/helper.page.jsx
+pages/helper.server.js
+pages/helper.server.jsx

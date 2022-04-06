@@ -1,0 +1,27 @@
+name: 'Run all tests'
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+      - '**/*.md'
+      - 'config/*'
+
+jobs:
+  tests:
+    name: 🧪 Unit and integration tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: 'NodeJS'
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npx yarn install
+      - run: npm run test
